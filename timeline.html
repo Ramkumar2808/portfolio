@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: black;
+    }
+    .container {
+      min-height: 100vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .timeline {
+      width: 80%;
+      height: auto;
+      margin: 200px auto;
+      position: relative;
+    }
+    .timeline ul {
+      list-style-type: none;
+    }
+    .timeline ul li {
+      padding: 20px;
+      width: 50%;
+      background-color: grey;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+    .timeline ul li:last-child {
+      margin-bottom: 0;
+    }
+    .timeline-content h1 {
+      color: white;
+      font-family: TTNormas;
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+    .timeline-content p {
+      line-height: 30px;
+    }
+    .timeline ul li:nth-child(odd) {
+      float: left;
+      clear: right;
+      transform: translateX(-30px);
+    }
+    .timeline ul li:nth-child(even) {
+      float: right;
+      clear: left;
+      transform: translateX(30px);
+    }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 2px;
+      background-color: grey;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .timeline ul li::after {
+      content: "";
+      position: absolute;
+      height: 15px;
+      width: 15px;
+      background-color: aqua;
+      border-radius: 50%;
+      top: 25px;
+    }
+    .timeline ul li:nth-child(odd)::after {
+      transform: translate(50%, -50%);
+      right: -30px;
+    }
+    .timeline ul li:nth-child(odd)::before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-color: transparent transparent transparent grey;
+      border-width: 15px;
+      position: absolute;
+      top: 12px;
+      right: -30px;
+    }
+    .timeline ul li:nth-child(even)::after {
+      transform: translate(-50%, -50%);
+      left: -30px;
+    }
+    .timeline ul li:nth-child(even)::before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-color: transparent grey transparent transparent;
+      border-width: 15px;
+      position: absolute;
+      top: 12px;
+      left: -30px;
+    }
+    @media (max-width: 700px) {
+      .timeline ul li:nth-child(odd),
+      .timeline ul li:nth-child(even) {
+        float: left;
+        clear: both;
+        transform: translateX(25px);
+      }
+
+      .timeline ul li {
+        width: 100%;
+      }
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 0;
+      }
+      .timeline ul li:nth-child(odd)::before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-color: transparent grey transparent transparent;
+        border-width: 15px;
+        position: absolute;
+        top: 12px;
+        left: -30px;
+      }
+      .timeline ul li:nth-child(odd)::after {
+        left: -40px;
+      }
+      .timeline ul li:nth-child(even)::after {
+       
+        left: -25px;
+      }
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="timeline">
+        <ul>
+          <li>
+            <div class="timeline-content">
+              <h1>Heading 1</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsum? Error maxime deleniti sunt
+                distinctio, provident blanditiis! Quidem nulla ipsum esse debitis ex atque, sapiente voluptates, tempora
+                impedit deserunt vero?
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="timeline-content">
+              <h1>Heading 2</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsum? Error maxime deleniti sunt
+                distinctio, provident blanditiis! Quidem nulla ipsum esse debitis ex atque, sapiente voluptates, tempora
+                impedit deserunt vero?
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="timeline-content">
+              <h1>Heading 3</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsum? Error maxime deleniti sunt
+                distinctio, provident blanditiis! Quidem nulla ipsum esse debitis ex atque, sapiente voluptates, tempora
+                impedit deserunt vero?
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="timeline-content">
+              <h1>Heading 4</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsum? Error maxime deleniti sunt
+                distinctio, provident blanditiis! Quidem nulla ipsum esse debitis ex atque, sapiente voluptates, tempora
+                impedit deserunt vero?
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,878 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --blue: #0a192f;
+  --lightslategray: #8892b0;
+  --lavender: #ccd6f6;
+  --aquamarine: #62fbd6;
+  --slategray: #717c98;
+
+  /* --smallfonts: 'Redressed'; */
+}
+body {
+  font-size: 16px;
+  background-color: var(--blue);
+  font-family: 'Lato', sans-serif;
+}
+/* ...navbar.. */
+
+.nav-item {
+  list-style-type: decimal-leading-zero;
+  color: var(--aquamarine);
+}
+.nav-link {
+  color: white;
+}
+#link {
+  word-spacing: 10px;
+  color: var(--lightslategray);
+  font-weight: bold;
+}
+.resume-btn {
+  list-style-type: none;
+}
+/* ....Homepage styles... */
+.home {
+  padding: 8rem 0 0 9rem;
+}
+.home h3 {
+  color: var(--aquamarine);
+
+  font-size: 1.5rem;
+  font-weight: lighter;
+  word-spacing: 10px;
+  letter-spacing: 3px;
+  margin: 1rem 0;
+}
+.home .myName,
+.home .myJob {
+  word-spacing: 10px;
+  font-size: 5rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+.home .myName {
+  color: var(--lavender);
+}
+.home .myJob {
+  color: var(--lightslategray);
+}
+.home p {
+  width: 50%;
+  margin: 1rem 0;
+  color: var(--slategray);
+  font-size: 1.2rem;
+  text-align: justify;
+}
+/* ...social media icons fixed leftside ... */
+.socialMedia {
+  position: fixed;
+  transform: translateX(4rem) translateY(-20rem);
+  list-style-type: none;
+}
+.socialMedia li {
+  margin-top: 1rem;
+}
+.socialMedia li a {
+  color: var(--lightslategray);
+  font-size: 1.3rem;
+}
+.socialMedia li a:hover {
+  color: var(--aquamarine);
+}
+.socialMedia hr {
+  background-color: var(--lightslategray);
+  width: 100px;
+  font-weight: bold;
+  transform: rotate(90deg) translateX(50px) translateY(40px);
+}
+/* ....email fixed rigth side.... */
+.emailId {
+  letter-spacing: 1px;
+  width: 100%;
+  position: fixed;
+  transform: translatey(-350px) translateX(95%);
+}
+.email {
+  width: 100px;
+  transform: rotate(90deg) translateX(50px) translateY(40px);
+}
+.email a {
+  color: var(--lightslategray);
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+.email a:hover {
+  color: var(--aquamarine);
+}
+.emailId hr {
+  background-color: var(--lightslategray);
+  width: 100px;
+  font-weight: bold;
+  transform: rotate(90deg) translateX(290px) translateY(43px);
+}
+/* ...about Me.... */
+.aboutMePage {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8rem 7rem 2rem;
+}
+.aboutMeHeading h3 {
+  word-spacing: 10px;
+  color: var(--lavender);
+}
+.aboutMeHeading span {
+  word-spacing: 10px;
+  color: var(--aquamarine);
+}
+.aboutMeHeading hr {
+  width: 70%;
+  background-color: var(--lightslategray);
+  font-weight: bold;
+  transform: translateX(180px) translateY(-30px);
+}
+.aboutMe {
+  width: 60%;
+}
+.aboutMe p {
+  color: var(--slategray);
+  font-weight: bold;
+}
+.aboutMe a {
+  color: var(--aquamarine);
+  text-decoration: none;
+}
+.aboutMe .knowns {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+}
+.aboutMe .knowns ul {
+  list-style-type: none;
+  color: var(--slategray);
+}
+.aboutMe .knowns ul li:hover {
+  color: var(--aquamarine);
+}
+.aboutMe .knowns ul li i {
+  margin-right: 10px;
+}
+.aboutMePage .my-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  /* margin-left: 5rem; */
+  margin: 2rem;
+  background-color: var(--lavender);
+  background-image: url('./images/myimg4.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* border: 5px solid rgb(59, 54, 54); */
+}
+.border-img p {
+  font-weight: bold;
+  color: var(--slategray);
+}
+.imagelogo hr {
+  background-color: var(--lightslategray);
+  width: 100%;
+}
+/* education.. */
+.education {
+  padding: 8rem 0 2rem 7rem;
+}
+.education h3 {
+  word-spacing: 10px;
+  color: var(--lavender);
+}
+.education span {
+  word-spacing: 10px;
+  color: var(--aquamarine);
+}
+.education hr {
+  width: 38%;
+  background-color: var(--lightslategray);
+  font-weight: bold;
+  transform: translateX(180px) translateY(-30px);
+}
+
+@media (max-width: 400px) {
+  .education {
+    padding: 8rem 2rem 2rem;
+  }
+}
+/* ...timeline..... */
+.container-timeline {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.timeline {
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+}
+.timeline ul {
+  list-style-type: none;
+}
+.timeline ul li {
+  padding: 20px;
+  width: 50%;
+  background-color: var(--slategray);
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+/* .timeline ul li:last-child {
+  margin-bottom: 0;
+} */
+.timeline-content h6 {
+  color: var(--blue);
+}
+.timeline-content h5 {
+  color: var(--lavender);
+
+  font-size: 1.35rem;
+  margin-bottom: 10px;
+}
+.timeline-content p {
+  line-height: 20px;
+  color: var(--blue);
+  font-weight: bold;
+}
+.timeline ul li:nth-child(odd) {
+  float: left;
+  clear: right;
+  transform: translateX(-30px);
+}
+.timeline ul li:nth-child(even) {
+  float: right;
+  clear: left;
+  transform: translateX(30px);
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 2px;
+  background-color: var(--slategray);
+  left: 50%;
+  transform: translateX(-50%);
+}
+.timeline ul li::after {
+  content: '';
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  background-color: var(--aquamarine);
+  border-radius: 50%;
+  top: 25px;
+}
+.timeline ul li:nth-child(odd)::after {
+  transform: translate(50%, -50%);
+  right: -30px;
+}
+.timeline ul li:nth-child(odd)::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent transparent transparent var(--slategray);
+  border-width: 15px;
+  position: absolute;
+  top: 12px;
+  right: -30px;
+}
+.timeline ul li:nth-child(even)::after {
+  transform: translate(-50%, -50%);
+  left: -30px;
+}
+.timeline ul li:nth-child(even)::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent var(--slategray) transparent transparent;
+  border-width: 15px;
+  position: absolute;
+  top: 12px;
+  left: -30px;
+}
+
+@media (max-width: 700px) {
+  .education {
+    padding: 8rem 2rem 2rem;
+  }
+  .timeline ul li:nth-child(odd),
+  .timeline ul li:nth-child(even) {
+    float: left;
+    clear: both;
+    transform: translateX(25px);
+  }
+
+  .timeline ul li {
+    width: 100%;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+  }
+  .timeline ul li:nth-child(odd)::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent var(--slategray) transparent transparent;
+    border-width: 15px;
+    position: absolute;
+    top: 12px;
+    left: -30px;
+  }
+  .timeline ul li:nth-child(odd)::after {
+    left: -40px;
+  }
+  .timeline ul li:nth-child(even)::after {
+    left: -25px;
+  }
+  .timeline-content h5 {
+    font-size: 1.2rem;
+  }
+  .timeline-content p {
+    line-height: 15px;
+    font-weight: bold;
+    font-size: 13px;
+  }
+}
+/* ....contact.... */
+
+.contact {
+  padding: 8rem 0 2rem 7rem;
+}
+.contact h3 {
+  word-spacing: 10px;
+  color: var(--lavender);
+}
+.contact span {
+  word-spacing: 10px;
+  color: var(--aquamarine);
+}
+.contact hr {
+  width: 41%;
+  background-color: var(--lightslategray);
+  font-weight: bold;
+  transform: translateX(145px) translateY(-30px);
+}
+.contact-details {
+  width: 80%;
+  border: 1px solid var(--lightslategray);
+  padding: 20px;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+}
+.contactme {
+  display: flex;
+}
+.contact--content h3 {
+  word-spacing: 10px;
+  color: var(--lavender);
+}
+.contact--content hr {
+  background-color: var(--lavender);
+  width: 50%;
+}
+
+.contactme1,
+.contactme2 {
+  list-style-type: none;
+
+  word-spacing: 10px;
+  font-size: 1.2rem;
+}
+.contactme1 {
+  color: var(--aquamarine);
+}
+.contactme2 {
+  margin-left: 2rem;
+  color: var(--lavender);
+}
+.contactme2 a {
+  color: var(--lavender);
+  text-decoration: none;
+}
+.contact--img {
+  width: 300px;
+  height: 300px;
+  background-image: url(./images/myimg6.jpg);
+  background-position: center;
+
+  background-size: cover;
+  border-radius: 50%;
+}
+@media (max-width: 900px) {
+  .contact--img {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  .contact {
+    padding: 8rem 0 2rem 2rem;
+  }
+  .contactme1,
+  .contactme2 {
+    font-size: 1rem;
+  }
+  .contactme2 {
+    margin-left: 1rem;
+  }
+  .contact-details {
+    border: none;
+  }
+}
+@media (max-width: 500px) {
+  .contact hr,
+  .education hr,
+  .aboutMe hr {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .contact {
+    padding: 3rem 2rem;
+  }
+  .contactme1,
+  .contactme2 {
+    margin-left: 0.5rem;
+    font-size: small;
+  }
+  .contact-details {
+    border: none;
+  }
+}
+/* ....footer... */
+.footer-distributed {
+  padding: 8rem 7rem 2rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.footer-left,
+.footer-right,
+.footer-center {
+  /* width: 300px; */
+
+  margin: 10px;
+}
+.footer-left h3 {
+  color: var(--aquamarine);
+}
+.footer-left span {
+  color: var(--lavender);
+}
+.footer-left ul {
+  list-style-type: none;
+  color: var(--lightslategray);
+}
+.footer-left p {
+  color: var(--lightslategray);
+}
+.footer-center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.footer-center div {
+  display: flex;
+  align-items: center;
+}
+.footer-center i {
+  color: var(--blue);
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--lavender);
+  text-align: center;
+  line-height: 50px;
+}
+.footer-icons {
+  display: flex;
+}
+.footer-right i {
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--lavender);
+  text-align: center;
+  line-height: 50px;
+  margin: 5px;
+}
+.footer-icons .fa-twitter {
+  color: rgb(9, 65, 87);
+}
+.footer-icons .fa-github {
+  color: black;
+}
+.footer-icons .fa-facebook {
+  color: blue;
+}
+.footer-icons .fa-linkedin {
+  color: rgb(255, 38, 0);
+}
+.footer-center p {
+  color: var(--lavender);
+  margin: 20px 10px;
+}
+.footer-center a {
+  color: var(--lavender);
+  text-decoration: none;
+}
+@media (max-width: 700px) {
+  .footer-distributed {
+    padding: 8px 0 2px;
+  }
+}
+/* ...responsive... */
+@media (max-width: 360px) {
+  .socialMedia,
+  .emailId {
+    display: none;
+  }
+  .navbar {
+    width: 100%;
+    background-color: rgb(29, 20, 20);
+  }
+  .navul {
+    padding-left: 50px;
+  }
+  .home,
+  .aboutMe {
+    padding: 8rem 2rem 2rem;
+  }
+  .home h3 {
+    font-size: 1.2rem;
+  }
+  .home .myName,
+  .home .myJob {
+    font-size: 1.5rem;
+  }
+
+  .home p {
+    width: 100%;
+    font-size: 1rem;
+  }
+  .aboutMePage {
+    width: 100%;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  .aboutMePage h3 {
+    font-size: 1.5rem;
+
+    word-spacing: 10px;
+  }
+  .aboutMe {
+    width: 100%;
+  }
+  .aboutMeHeading hr {
+    width: 40%;
+  }
+  .aboutMe p {
+    width: 100%;
+    font-size: 0.8rem;
+    font-weight: normal;
+    text-align: justify;
+    text-indent: 2rem;
+  }
+  .aboutMe .knowns {
+    width: 100%;
+    font-size: 0.8rem;
+    justify-content: space-between;
+  }
+  .aboutMe .knowns ul li i {
+    margin-right: 5px;
+  }
+  .aboutMePage .my-img {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 500px) {
+  .socialMedia,
+  .emailId {
+    display: none;
+  }
+  .navbar {
+    width: 100%;
+    background-color: rgb(29, 20, 20);
+  }
+  .navul {
+    padding-left: 50px;
+  }
+  .home,
+  .aboutMe {
+    padding: 8rem 2rem 2rem;
+  }
+  .home h3 {
+    font-size: 1.2rem;
+  }
+  .home .myName,
+  .home .myJob {
+    font-size: 1.5rem;
+  }
+
+  .home p {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+  .aboutMePage {
+    width: 100%;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  .aboutMePage h3 {
+    font-size: 1.5rem;
+
+    word-spacing: 10px;
+  }
+  .aboutMe {
+    width: 100%;
+  }
+  .aboutMeHeading hr {
+    width: 40%;
+  }
+  .aboutMe p {
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: normal;
+    text-align: justify;
+    text-indent: 2rem;
+  }
+  .aboutMe .knowns {
+    width: 100%;
+    font-size: 1.2rem;
+    justify-content: space-between;
+  }
+  .aboutMe .knowns ul li i {
+    margin-right: 5px;
+  }
+  .aboutMePage .my-img {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 650px) {
+  .socialMedia,
+  .emailId {
+    display: none;
+  }
+  .navbar {
+    width: 100%;
+    background-color: rgb(29, 20, 20);
+  }
+  .navul {
+    padding-left: 50px;
+  }
+  .home,
+  .aboutMe {
+    padding: 8rem 2rem 2rem;
+  }
+  .home h3 {
+    font-size: 1.8rem;
+  }
+  .home .myName,
+  .home .myJob {
+    font-size: 2rem;
+  }
+
+  .home p {
+    width: 100%;
+    font-size: 1.4rem;
+  }
+  .aboutMePage {
+    width: 100%;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  .aboutMePage h3 {
+    font-size: 1.5rem;
+
+    word-spacing: 10px;
+  }
+  .aboutMe {
+    width: 100%;
+  }
+  .aboutMeHeading hr {
+    width: 40%;
+  }
+  .aboutMe p {
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: normal;
+    text-align: justify;
+  }
+  .aboutMe .knowns {
+    width: 100%;
+    font-size: 1.2rem;
+    justify-content: space-around;
+  }
+  .aboutMe .knowns ul li i {
+    margin-right: 5px;
+  }
+  .aboutMePage .my-img {
+    width: 300px;
+    height: 300px;
+    margin: 10px auto;
+  }
+}
+
+@media (min-width: 651px) and (max-width: 800px) {
+  .socialMedia,
+  .emailId {
+    display: none;
+  }
+  .navbar {
+    width: 100%;
+    background-color: rgb(29, 20, 20);
+  }
+  .navul {
+    padding-left: 50px;
+  }
+  .home,
+  .aboutMe {
+    padding: 8rem 2rem 2rem;
+  }
+  .home h3 {
+    font-size: 1.8rem;
+  }
+  .home .myName,
+  .home .myJob {
+    font-size: 2rem;
+  }
+
+  .home p {
+    width: 100%;
+    font-size: 1.4rem;
+  }
+  .aboutMePage {
+    width: 100%;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  .aboutMePage h3 {
+    font-size: 1.5rem;
+
+    word-spacing: 10px;
+  }
+  .aboutMe {
+    width: 100%;
+  }
+  .aboutMeHeading hr {
+    width: 40%;
+  }
+  .aboutMe p {
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: normal;
+    text-align: justify;
+  }
+  .aboutMe .knowns {
+    width: 100%;
+    font-size: 1.2rem;
+    justify-content: space-around;
+  }
+  .aboutMe .knowns ul li i {
+    margin-right: 5px;
+  }
+  .aboutMePage .my-img {
+    width: 350px;
+    height: 350px;
+    margin: 10px auto;
+  }
+}
+
+@media (min-width: 801px) and (max-width: 950px) {
+  .socialMedia,
+  .emailId {
+    margin: 8rem 0 0 -2rem;
+  }
+  .navbar {
+    width: 100%;
+    background-color: rgb(29, 20, 20);
+  }
+  .navul {
+    padding-left: 50px;
+  }
+  .home,
+  .aboutMe {
+    padding: 8rem 7rem 2rem;
+  }
+  .home h3 {
+    font-size: 1.8rem;
+  }
+  .home .myName,
+  .home .myJob {
+    font-size: 2rem;
+  }
+
+  .home p {
+    width: 100%;
+    font-size: 1.4rem;
+  }
+  .aboutMePage {
+    width: 100%;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  .aboutMePage h3 {
+    font-size: 1.5rem;
+
+    word-spacing: 10px;
+  }
+  .aboutMe {
+    width: 100%;
+  }
+  .aboutMeHeading hr {
+    width: 40%;
+  }
+  .aboutMe p {
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: normal;
+    text-align: justify;
+  }
+  .aboutMe .knowns {
+    width: 100%;
+    font-size: 1.2rem;
+    justify-content: space-around;
+  }
+  .aboutMe .knowns ul li i {
+    margin-right: 5px;
+  }
+  .aboutMePage .my-img {
+    width: 300px;
+    height: 300px;
+    margin: 10px auto;
+  }
+}
